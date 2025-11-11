@@ -1,4 +1,4 @@
-ï»¿const menuHighlights = [
+const menuHighlights = [
   {
     name: "[PLACEHOLDER: Dish name]",
     description: "[PLACEHOLDER: 1-2 sentence description for this signature dish]",
@@ -28,8 +28,8 @@
 const orderingSteps = [
   "Pick your items in the Square storefront and choose the pickup window that fits your schedule.",
   "Use the order notes for sauce requests, extra napkins, or delivery instructions for curbside handoff.",
-  "Check out securely with Squareâ€”your card is charged immediately and the ticket prints on our line.",
-  "Head to the Ahli Baba's counter, give us the name on the order, and weâ€™ll hand off your food fresh off the grill."
+  "Check out securely with Square—your card is charged immediately and the ticket prints on our line.",
+  "Head to the Ahli Baba's counter, give us the name on the order, and we’ll hand off your food fresh off the grill."
 ];
 
 const vendingConcepts = [
@@ -38,7 +38,7 @@ const vendingConcepts = [
     summary: "Fresh tacos and street-fare pop-up for festivals and campus events.",
     specialties: ["Tacos", "Street corn", "Churros"],
     footprints: ["10x10"],
-    image: "assets/images/ponchos-stand.HEIC"
+    image: "assets/images/ponchos-stand.jpg"
   },
   {
     name: "Ahli Baba's Stand",
@@ -52,7 +52,7 @@ const vendingConcepts = [
     summary: "Smash burgers and hand-cut fries with crowd-friendly toppings.",
     specialties: ["Smash burgers", "Fries", "Shakes"],
     footprints: ["10x10"],
-    image: "assets/images/Burger-ranch-stand.HEIC"
+    image: "assets/images/Burger-ranch-stand.jpg"
   }
 ];
 
@@ -149,6 +149,12 @@ const renderConcepts = () => {
         </ul>
       </div>
     `;
+    const img = card.querySelector("img");
+    if (img) {
+      img.addEventListener("error", () => {
+        img.src = "assets/images/store-front.jpg";
+      });
+    }
     grid.appendChild(card);
   });
 };
@@ -206,3 +212,4 @@ const init = () => {
 document.addEventListener("DOMContentLoaded", init);
 window.addEventListener("load", sizeOrderingIframe);
 window.addEventListener("resize", sizeOrderingIframe);
+
