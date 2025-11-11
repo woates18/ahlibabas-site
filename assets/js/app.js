@@ -26,10 +26,10 @@
 ];
 
 const orderingSteps = [
-  "[PLACEHOLDER: Step 1 description]",
-  "[PLACEHOLDER: Step 2 description]",
-  "[PLACEHOLDER: Step 3 description]",
-  "[PLACEHOLDER: Step 4 description]"
+  "Pick your items in the Square storefront and choose the pickup window that fits your schedule.",
+  "Use the order notes for sauce requests, extra napkins, or delivery instructions for curbside handoff.",
+  "Check out securely with Square—your card is charged immediately and the ticket prints on our line.",
+  "Head to the Ahli Baba's counter, give us the name on the order, and we’ll hand off your food fresh off the grill."
 ];
 
 const vendingConcepts = [
