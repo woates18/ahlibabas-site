@@ -32,7 +32,7 @@
     </script>
     <script defer src="assets/js/app.js"></script>
 </head>
-<body data-page="ordering" class="font-body bg-babaCream text-slate-900">
+<body data-page="ordering" class="font-body bg-babaCream text-slate-900 min-h-screen flex flex-col">
     <header class="bg-babaMaroon text-babaCream shadow-lg">
         <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-4 px-4 py-4">
             <div>
@@ -47,44 +47,19 @@
                 <a class="text-babaCream/80 hover:text-babaGold transition-colors" data-nav="truck" href="truck.html">Food Truck</a>
                 <a class="text-babaCream/80 hover:text-babaGold transition-colors" data-nav="contact" href="contact.html">Contact</a>
             </nav>
-            <a href="#order-links" class="inline-flex items-center rounded-full border border-babaCream bg-babaCream px-5 py-2 text-sm font-semibold text-babaMaroon shadow-sm transition hover:bg-babaMaroon hover:text-babaCream">Order Now</a>
+            
         </div>
     </header>
 
-    <main>
-        <section class="bg-gradient-to-b from-babaMaroon/10 via-babaCream to-babaCream">
-            <div class="max-w-5xl mx-auto px-4 py-16 text-center space-y-4">
-                <p class="text-sm uppercase tracking-[0.4em] text-slate-600">Online Ordering</p>
-                <h2 class="font-subhead text-4xl font-bold text-slate-900">Kabobs, bowls, and fries ready when you arrive.</h2>
-                <p class="text-lg text-slate-700">Place your order through our Square storefront for same-day pickup at Ahli Baba&rsquo;s Kabob Shop. Schedule the pickup window that works for you, pay securely, and skip the line.</p>
-                <div class="flex flex-wrap justify-center gap-3">
-                    <a class="rounded-full border border-babaMaroon bg-babaCream px-5 py-3 text-sm font-semibold text-babaMaroon shadow-sm transition hover:bg-babaMaroon hover:text-babaCream" href="#order-links">Start Order on Square</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="bg-white" id="order-links">
-            <div class="max-w-6xl mx-auto px-4 pb-20 space-y-6">
-                <div class="text-center space-y-3">
-                    <p class="text-sm uppercase tracking-[0.4em] text-babaBrick">Square storefront</p>
-                    <h2 class="font-subhead text-3xl font-bold text-slate-900">Order without leaving our site.</h2>
-                    <p class="text-lg leading-relaxed text-slate-700">Browse the live menu feed directly from our Square POS and complete checkout inside the embed. Everything you add here prints in the restaurant, so the team can start cooking right away.</p>
-                </div>
-                <div class="rounded-3xl border-4 border-babaGold/70 bg-white shadow-xl overflow-hidden">
-                    <iframe
-                        src="https://ahlibabas.square.site"
-                        title="Ahli Baba's Square Online Ordering"
-                        class="h-[80vh] w-full"
-                        loading="lazy"
-                        allow="payment *"
-                        style="border:0;">
-                    </iframe>
-                </div>
-                <div class="text-center">
-                    <a href="https://ahlibabas.square.site" target="_blank" rel="noopener" class="inline-flex items-center rounded-full bg-babaMaroon px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-babaMaroon/90">Open Square Ordering in New Tab</a>
-                </div>
-            </div>
-        </section>
+    <main class="flex-1 overflow-hidden">
+        <iframe
+            src="https://ahlibabas.square.site"
+            title="Ahli Baba's Square Online Ordering"
+            class="w-full h-full block"
+            loading="lazy"
+            allow="payment *"
+            style="border:0;">
+        </iframe>
     </main>
 
     <footer class="bg-babaMaroon text-babaCream">
