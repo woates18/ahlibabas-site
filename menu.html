@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ahli Baba's Kabob Shop | Menu</title>
+    <meta name="description" content="[PLACEHOLDER: Meta description for menu page]" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;600;700&family=Source+Sans+3:wght@400;600;700&family=Zilla+Slab:wght@500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        babaSky: '#7EC8E3',
+                        babaMaroon: '#781B33',
+                        babaGold: '#FBE36C',
+                        babaBrick: '#A3472A',
+                        babaCream: '#FFF6E0'
+                    },
+                    fontFamily: {
+                        body: ['Source Sans 3', 'Karla', 'system-ui', 'sans-serif'],
+                        subhead: ['Zilla Slab', 'serif'],
+                        signage: ['SeaOfJapan', 'serif']
+                    }
+                }
+            }
+        };
+    </script>
+    <script defer src="assets/js/app.js"></script>
+</head>
+<body data-page="menu" class="font-body bg-babaCream text-slate-900">
+    <header class="bg-babaMaroon text-babaCream shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-4 px-4 py-4">
+            <div>
+                <p class="text-sm uppercase tracking-[0.3em] text-babaCream/80">Since 1989</p>
+                <h1 class="text-4xl font-signage uppercase tracking-[0.25em] text-babaGold drop-shadow-[0_4px_0_rgba(0,0,0,0.4)]">Ahli Baba's Kabob Shop</h1>
+            </div>
+            <nav class="flex flex-wrap gap-4 font-semibold uppercase tracking-[0.2em] text-xs sm:text-sm">
+                <a class="text-babaCream/80 hover:text-babaGold transition-colors" data-nav="home" href="index.html">Home</a>
+                <a class="text-babaCream/80 hover:text-babaGold transition-colors" data-nav="menu" href="menu.html">Menu</a>
+                <a class="text-babaCream/80 hover:text-babaGold transition-colors" data-nav="ordering" href="ordering.html">Online Ordering</a>
+                <a class="text-babaCream/80 hover:text-babaGold transition-colors" data-nav="vending" href="vending.html">Vending</a>
+                <a class="text-babaCream/80 hover:text-babaGold transition-colors" data-nav="truck" href="truck.html">Food Truck</a>
+                <a class="text-babaCream/80 hover:text-babaGold transition-colors" data-nav="contact" href="contact.html">Contact</a>
+            </nav>
+            <a href="ordering.html" class="inline-flex items-center rounded-full border border-babaCream bg-babaCream px-5 py-2 text-sm font-semibold text-babaMaroon shadow-sm transition hover:bg-babaMaroon hover:text-babaCream">Order Now</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="bg-gradient-to-b from-babaMaroon/10 via-babaCream to-babaCream">
+            <div class="max-w-5xl mx-auto px-4 py-16 text-center space-y-4">
+                <p class="text-sm uppercase tracking-[0.4em] text-slate-600">[PLACEHOLDER: Menu kicker]</p>
+                <h2 class="font-subhead text-4xl font-bold text-slate-900">[PLACEHOLDER: Menu headline]</h2>
+                <p class="text-lg leading-relaxed text-slate-700">[PLACEHOLDER: Menu overview paragraph that mentions scratch prep, dietary options, etc.]</p>
+                <div class="flex flex-wrap justify-center gap-3 text-sm">
+                    <span class="rounded-full border border-babaBrick/30 bg-white px-4 py-2">[PLACEHOLDER: Menu badge 1]</span>
+                    <span class="rounded-full border border-babaBrick/30 bg-white px-4 py-2">[PLACEHOLDER: Menu badge 2]</span>
+                    <span class="rounded-full border border-babaBrick/30 bg-white px-4 py-2">[PLACEHOLDER: Menu badge 3]</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white">
+            <div class="max-w-6xl mx-auto px-4 py-16">
+                <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+                    <div>
+                        <p class="text-sm font-semibold uppercase tracking-[0.4em] text-babaBrick/70">[PLACEHOLDER: Section kicker]</p>
+                        <h2 class="font-subhead text-3xl font-bold text-slate-900">[PLACEHOLDER: Signature section headline]</h2>
+                        <p class="text-slate-700 leading-relaxed">[PLACEHOLDER: Explain how menu is organized (pitas, bowls, sides, vegan, etc.)]</p>
+                    </div>
+                    <a href="ordering.html" class="text-sm font-semibold uppercase tracking-[0.2em] text-babaMaroon">[PLACEHOLDER: CTA]</a>
+                </div>
+                <div id="menu-grid" class="mt-10 grid gap-6 md:grid-cols-2"></div>
+            </div>
+        </section>
+
+        <section class="bg-babaCream">
+            <div class="max-w-6xl mx-auto px-4 py-16 grid gap-8 lg:grid-cols-3 text-sm">
+                <article class="rounded-3xl border border-babaBrick/20 bg-white p-6 shadow">
+                    <h3 class="font-subhead text-lg font-semibold text-slate-900">[PLACEHOLDER: Pillar title]</h3>
+                    <p class="mt-3 leading-relaxed text-slate-600">[PLACEHOLDER: Supporting copy about ingredient standards]</p>
+                </article>
+                <article class="rounded-3xl border border-babaBrick/20 bg-white p-6 shadow">
+                    <h3 class="font-subhead text-lg font-semibold text-slate-900">[PLACEHOLDER: Pillar title]</h3>
+                    <p class="mt-3 leading-relaxed text-slate-600">[PLACEHOLDER: Supporting copy about dietary accommodations]</p>
+                </article>
+                <article class="rounded-3xl border border-babaBrick/20 bg-white p-6 shadow">
+                    <h3 class="font-subhead text-lg font-semibold text-slate-900">[PLACEHOLDER: Pillar title]</h3>
+                    <p class="mt-3 leading-relaxed text-slate-600">[PLACEHOLDER: Supporting copy about scaling for events]</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-babaMaroon text-babaCream">
+        <div class="max-w-6xl mx-auto px-4 py-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between text-sm">
+            <p>© 2025 Ahli Baba's. Crafted for coursework + future launch.</p>
+            <div class="space-x-4">
+                <a class="hover:text-babaGold" href="ordering.html">Online Ordering</a>
+                <a class="hover:text-babaGold" href="vending.html">Vending Deck</a>
+                <a class="hover:text-babaGold" href="contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

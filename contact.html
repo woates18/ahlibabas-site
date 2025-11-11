@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ahli Baba's Kabob Shop | Contact & Booking</title>
+    <meta name="description" content="[PLACEHOLDER: Meta description for contact page]" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;600;700&family=Source+Sans+3:wght@400;600;700&family=Zilla+Slab:wght@500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        babaSky: '#7EC8E3',
+                        babaMaroon: '#781B33',
+                        babaGold: '#FBE36C',
+                        babaBrick: '#A3472A',
+                        babaCream: '#FFF6E0'
+                    },
+                    fontFamily: {
+                        body: ['Source Sans 3', 'Karla', 'system-ui', 'sans-serif'],
+                        subhead: ['Zilla Slab', 'serif'],
+                        signage: ['SeaOfJapan', 'serif']
+                    }
+                }
+            }
+        };
+    </script>
+    <script defer src="assets/js/app.js"></script>
+</head>
+<body data-page="contact" class="font-body bg-babaCream text-slate-900">
+    <header class="bg-babaMaroon text-babaCream shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-4 px-4 py-4">
+            <div>
+                <p class="text-sm uppercase tracking-[0.3em] text-babaCream/80">Since 1989</p>
+                <h1 class="text-4xl font-signage uppercase tracking-[0.25em] text-babaGold drop-shadow-[0_4px_0_rgba(0,0,0,0.4)]">Ahli Baba's Kabob Shop</h1>
+            </div>
+            <nav class="flex flex-wrap gap-4 font-semibold uppercase tracking-[0.2em] text-xs sm:text-sm">
+                <a class="text-babaCream/80 hover:text-babaGold transition-colors" data-nav="home" href="index.html">Home</a>
+                <a class="text-babaCream/80 hover:text-babaGold transition-colors" data-nav="menu" href="menu.html">Menu</a>
+                <a class="text-babaCream/80 hover:text-babaGold transition-colors" data-nav="ordering" href="ordering.html">Online Ordering</a>
+                <a class="text-babaCream/80 hover:text-babaGold transition-colors" data-nav="vending" href="vending.html">Vending</a>
+                <a class="text-babaCream/80 hover:text-babaGold transition-colors" data-nav="truck" href="truck.html">Food Truck</a>
+                <a class="text-babaCream/80 hover:text-babaGold transition-colors" data-nav="contact" href="contact.html">Contact</a>
+            </nav>
+            <a href="ordering.html" class="inline-flex items-center rounded-full border border-babaCream bg-babaCream px-5 py-2 text-sm font-semibold text-babaMaroon shadow-sm transition hover:bg-babaMaroon hover:text-babaCream">Order Now</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="bg-gradient-to-b from-babaMaroon/12 via-babaCream to-babaCream">
+            <div class="max-w-5xl mx-auto px-4 py-16 text-center space-y-4">
+                <p class="text-sm uppercase tracking-[0.4em] text-babaMaroon">[PLACEHOLDER: Contact Tagline]</p>
+                <h2 class="font-subhead text-4xl font-bold text-slate-900">[PLACEHOLDER: Contact Headline]</h2>
+                <p class="text-lg text-slate-700">[PLACEHOLDER: Contact intro paragraph explaining how to reach each team.]</p>
+                <div class="flex flex-wrap justify-center gap-3 text-sm">
+                    <span class="rounded-full border border-babaMaroon/20 bg-white px-4 py-2 text-babaMaroon">[PLACEHOLDER: Response time]</span>
+                    <span class="rounded-full border border-babaMaroon/20 bg-white px-4 py-2 text-babaMaroon">[PLACEHOLDER: Service areas]</span>
+                    <span class="rounded-full border border-babaMaroon/20 bg-white px-4 py-2 text-babaMaroon">[PLACEHOLDER: Booking season]</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-babaCream">
+            <div class="max-w-6xl mx-auto px-4 py-16 grid gap-8 lg:grid-cols-2">
+                <div class="space-y-6">
+                    <h3 class="font-subhead text-2xl font-semibold text-slate-900">[PLACEHOLDER: Direct Contact Details]</h3>
+                    <div class="space-y-3 text-sm">
+                        <p><strong>Restaurant:</strong> <span>[PLACEHOLDER: Phone/email]</span></p>
+                        <p><strong>Vending bookings:</strong> <span>[PLACEHOLDER: Booking email]</span></p>
+                        <p><strong>Food truck:</strong> <span>[PLACEHOLDER: Coordinator contact]</span></p>
+                        <p><strong>Press/PR:</strong> <span>[PLACEHOLDER: Contact]</span></p>
+                    </div>
+                    <div>
+                        <p class="text-sm uppercase tracking-[0.3em] text-slate-500">Social</p>
+                        <div class="flex gap-4 text-xl">
+                            <a class="hover:text-babaMaroon" href="#">IG</a>
+                            <a class="hover:text-babaMaroon" href="#">FB</a>
+                            <a class="hover:text-babaMaroon" href="#">TikTok</a>
+                        </div>
+                    </div>
+                </div>
+                <form class="space-y-4 rounded-3xl bg-white p-8 shadow-xl border border-babaGold/60">
+                    <div>
+                        <label class="text-sm font-semibold" for="name">Your Name</label>
+                        <input class="mt-1 w-full rounded-2xl border border-babaBrick/30 px-4 py-3" id="name" type="text" placeholder="[PLACEHOLDER: Example name]" />
+                    </div>
+                    <div>
+                        <label class="text-sm font-semibold" for="email">Email</label>
+                        <input class="mt-1 w-full rounded-2xl border border-babaBrick/30 px-4 py-3" id="email" type="email" placeholder="[PLACEHOLDER: Example email]" />
+                    </div>
+                    <div>
+                        <label class="text-sm font-semibold" for="details">Event Details</label>
+                        <textarea class="mt-1 w-full rounded-2xl border border-babaBrick/30 px-4 py-3" id="details" rows="4" placeholder="[PLACEHOLDER: What info to capture]"></textarea>
+                    </div>
+                    <button type="button" class="w-full rounded-2xl bg-babaMaroon px-4 py-3 text-sm font-semibold text-white">[PLACEHOLDER: Form button copy]</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-babaMaroon text-babaCream">
+        <div class="max-w-6xl mx-auto px-4 py-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between text-sm">
+            <p>© 2025 Ahli Baba's. Crafted for coursework + future launch.</p>
+            <div class="space-x-4">
+                <a class="hover:text-babaGold" href="ordering.html">Online Ordering</a>
+                <a class="hover:text-babaGold" href="vending.html">Vending Deck</a>
+                <a class="hover:text-babaGold" href="contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
