@@ -35,23 +35,20 @@ const orderingSteps = [
 const vendingConcepts = [
   {
     name: "Poncho's Stand",
-    summary: "Fresh tacos and street-fare pop-up for festivals and campus events.",
+    summary: "[PLACEHOLDER: 1–2 sentence description of this stand]",
     specialties: ["Tacos", "Street corn", "Churros"],
-    footprints: ["10x10"],
     image: "assets/images/ponchos-stand.jpg"
   },
   {
     name: "Ahli Baba's Stand",
-    summary: "Signature kabobs, bowls, and fries served fast from our classic stand.",
+    summary: "[PLACEHOLDER: 1–2 sentence description of this stand]",
     specialties: ["Kabobs", "Falafel", "Garlic fries"],
-    footprints: ["10x15"],
     image: "assets/images/ahli-babas-stand.JPG"
   },
   {
     name: "Burger Ranch Stand",
-    summary: "Smash burgers and hand-cut fries with crowd-friendly toppings.",
+    summary: "[PLACEHOLDER: 1–2 sentence description of this stand]",
     specialties: ["Smash burgers", "Fries", "Shakes"],
-    footprints: ["10x10"],
     image: "assets/images/Burger-ranch-stand.jpg"
   }
 ];
@@ -136,9 +133,6 @@ const renderConcepts = () => {
       </figure>
       <div class="flex flex-1 flex-col gap-4 p-6">
         <div>
-          <p class="text-xs uppercase tracking-[0.3em] text-slate-500">${concept.footprints.join(
-            " \u2022 "
-          )} footprints</p>
           <h3 class="font-subhead mt-1 text-2xl font-semibold text-slate-900">${concept.name}</h3>
           <p class="text-base leading-relaxed text-slate-600">${concept.summary}</p>
         </div>
