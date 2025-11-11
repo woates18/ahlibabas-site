@@ -180,12 +180,29 @@ const highlightNav = () => {
   });
 };
 
+// Ensure the Square iframe on the ordering page fills the viewport
+const sizeOrderingIframe = () => {
+  const isOrdering = document.body?.dataset?.page === "ordering";
+  if (!isOrdering) return;
+  const header = document.querySelector("header");
+  const footer = document.querySelector("footer");
+  const iframe = document.querySelector("main iframe");
+  if (!iframe) return;
+  const headerH = header?.offsetHeight || 0;
+  const footerH = footer?.offsetHeight || 0;
+  const available = Math.max(window.innerHeight - headerH - footerH, 0);
+  iframe.style.height = `${available}px`;
+};
+
 const init = () => {
   highlightNav();
   renderMenu();
   renderOrderingSteps();
   renderConcepts();
   renderTruckStops();
+  sizeOrderingIframe();
 };
 
 document.addEventListener("DOMContentLoaded", init);
+window.addEventListener("load", sizeOrderingIframe);
+window.addEventListener("resize", sizeOrderingIframe);
