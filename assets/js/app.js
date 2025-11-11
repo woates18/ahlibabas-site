@@ -34,25 +34,25 @@ const orderingSteps = [
 
 const vendingConcepts = [
   {
-    name: "[PLACEHOLDER: Concept name]",
-    summary: "[PLACEHOLDER: Summary of cuisine + events]",
-    specialties: ["[PLACEHOLDER: Specialty]", "[PLACEHOLDER: Specialty]", "[PLACEHOLDER: Specialty]"],
-    footprints: ["[PLACEHOLDER: Size]"],
-    image: "assets/images/show.food_.alibaba.jpg"
+    name: "Poncho's Stand",
+    summary: "Fresh tacos and street-fare pop-up for festivals and campus events.",
+    specialties: ["Tacos", "Street corn", "Churros"],
+    footprints: ["10x10"],
+    image: "assets/images/ponchos-stand.HEIC"
   },
   {
-    name: "[PLACEHOLDER: Concept name]",
-    summary: "[PLACEHOLDER: Summary]",
-    specialties: ["[PLACEHOLDER: Specialty]", "[PLACEHOLDER: Specialty]", "[PLACEHOLDER: Specialty]"],
-    footprints: ["[PLACEHOLDER: Size]"],
-    image: "assets/images/ahlibabas-shop.jpg"
+    name: "Ahli Baba's Stand",
+    summary: "Signature kabobs, bowls, and fries served fast from our classic stand.",
+    specialties: ["Kabobs", "Falafel", "Garlic fries"],
+    footprints: ["10x15"],
+    image: "assets/images/ahli-babas-stand.JPG"
   },
   {
-    name: "[PLACEHOLDER: Concept name]",
-    summary: "[PLACEHOLDER: Summary]",
-    specialties: ["[PLACEHOLDER: Specialty]", "[PLACEHOLDER: Specialty]", "[PLACEHOLDER: Specialty]"],
-    footprints: ["[PLACEHOLDER: Size]"],
-    image: "assets/images/contact-image.png"
+    name: "Burger Ranch Stand",
+    summary: "Smash burgers and hand-cut fries with crowd-friendly toppings.",
+    specialties: ["Smash burgers", "Fries", "Shakes"],
+    footprints: ["10x10"],
+    image: "assets/images/Burger-ranch-stand.HEIC"
   }
 ];
 
