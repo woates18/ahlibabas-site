@@ -84,20 +84,155 @@
                         </div>
                     </div>
                 </div>
-                <form class="space-y-4 rounded-3xl bg-white p-8 shadow-xl border border-babaGold/60">
+                <form id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" class="space-y-5 rounded-3xl bg-white p-8 shadow-xl border border-babaGold/60">
+                    <input type="hidden" name="form-name" value="contact">
+                    <p class="hidden"><label>Don’t fill this out: <input name="bot-field" /></label></p>
+
                     <div>
-                        <label class="text-sm font-semibold" for="name">Your Name</label>
-                        <input class="mt-1 w-full rounded-2xl border border-babaBrick/30 px-4 py-3" id="name" type="text" placeholder="[PLACEHOLDER: Example name]" />
+                        <label class="text-sm font-semibold" for="reason">Reason</label>
+                        <select id="reason" name="reason" class="mt-1 w-full rounded-2xl border border-babaBrick/30 px-4 py-3" required>
+                            <option value="booking">Booking</option>
+                            <option value="catering">Catering</option>
+                            <option value="jobs-storefront">Job Application – Storefront</option>
+                            <option value="jobs-vending">Job Application – Vending</option>
+                            <option value="general">General Question</option>
+                        </select>
                     </div>
-                    <div>
-                        <label class="text-sm font-semibold" for="email">Email</label>
-                        <input class="mt-1 w-full rounded-2xl border border-babaBrick/30 px-4 py-3" id="email" type="email" placeholder="[PLACEHOLDER: Example email]" />
+
+                    <div class="grid gap-4 sm:grid-cols-2">
+                        <div>
+                            <label class="text-sm font-semibold" for="name">Your Name</label>
+                            <input class="mt-1 w-full rounded-2xl border border-babaBrick/30 px-4 py-3" id="name" name="name" type="text" placeholder="[PLACEHOLDER: Example name]" required />
+                        </div>
+                        <div>
+                            <label class="text-sm font-semibold" for="email">Email</label>
+                            <input class="mt-1 w-full rounded-2xl border border-babaBrick/30 px-4 py-3" id="email" name="email" type="email" placeholder="[PLACEHOLDER: you@example.com]" required />
+                        </div>
+                        <div class="sm:col-span-2">
+                            <label class="text-sm font-semibold" for="phone">Phone (optional)</label>
+                            <input class="mt-1 w-full rounded-2xl border border-babaBrick/30 px-4 py-3" id="phone" name="phone" type="tel" placeholder="[PLACEHOLDER: (555) 555-5555]" />
+                        </div>
                     </div>
-                    <div>
-                        <label class="text-sm font-semibold" for="details">Event Details</label>
-                        <textarea class="mt-1 w-full rounded-2xl border border-babaBrick/30 px-4 py-3" id="details" rows="4" placeholder="[PLACEHOLDER: What info to capture]"></textarea>
+
+                    <div data-section="booking" class="space-y-4 hidden">
+                        <p class="text-sm uppercase tracking-[0.3em] text-slate-500">Booking Details</p>
+                        <div class="grid gap-4 sm:grid-cols-2">
+                            <div>
+                                <label class="text-sm font-semibold" for="event_name">Event Name</label>
+                                <input class="mt-1 w-full rounded-2xl border border-babaBrick/30 px-4 py-3" id="event_name" name="event_name" type="text" placeholder="[PLACEHOLDER: Event name]" data-required />
+                            </div>
+                            <div>
+                                <label class="text-sm font-semibold" for="organization">Organization</label>
+                                <input class="mt-1 w-full rounded-2xl border border-babaBrick/30 px-4 py-3" id="organization" name="organization" type="text" placeholder="[PLACEHOLDER: Org / Host]" data-required />
+                            </div>
+                            <div>
+                                <label class="text-sm font-semibold" for="event_date">Event Date</label>
+                                <input class="mt-1 w-full rounded-2xl border border-babaBrick/30 px-4 py-3" id="event_date" name="event_date" type="date" data-required />
+                            </div>
+                            <div>
+                                <label class="text-sm font-semibold" for="attendance">Expected Attendance</label>
+                                <input class="mt-1 w-full rounded-2xl border border-babaBrick/30 px-4 py-3" id="attendance" name="attendance" type="number" min="1" placeholder="[PLACEHOLDER: e.g., 500]" data-required />
+                            </div>
+                            <div class="sm:col-span-2">
+                                <label class="text-sm font-semibold" for="venue">Venue/Location</label>
+                                <input class="mt-1 w-full rounded-2xl border border-babaBrick/30 px-4 py-3" id="venue" name="venue" type="text" placeholder="[PLACEHOLDER: Address or venue name]" data-required />
+                            </div>
+                            <div class="sm:col-span-2">
+                                <label class="text-sm font-semibold" for="booking_message">Notes</label>
+                                <textarea class="mt-1 w-full rounded-2xl border border-babaBrick/30 px-4 py-3" id="booking_message" name="booking_message" rows="4" placeholder="[PLACEHOLDER: Power/water available, load-in, schedule, etc.]" data-required></textarea>
+                            </div>
+                        </div>
                     </div>
-                    <button type="button" class="w-full rounded-2xl bg-babaMaroon px-4 py-3 text-sm font-semibold text-white">[PLACEHOLDER: Form button copy]</button>
+
+                    <div data-section="catering" class="space-y-4 hidden">
+                        <p class="text-sm uppercase tracking-[0.3em] text-slate-500">Catering Details</p>
+                        <div class="grid gap-4 sm:grid-cols-2">
+                            <div>
+                                <label class="text-sm font-semibold" for="catering_date">Date</label>
+                                <input class="mt-1 w-full rounded-2xl border border-babaBrick/30 px-4 py-3" id="catering_date" name="catering_date" type="date" data-required />
+                            </div>
+                            <div>
+                                <label class="text-sm font-semibold" for="headcount">Headcount</label>
+                                <input class="mt-1 w-full rounded-2xl border border-babaBrick/30 px-4 py-3" id="headcount" name="headcount" type="number" min="1" placeholder="[PLACEHOLDER: Expected guests]" data-required />
+                            </div>
+                            <div class="sm:col-span-2">
+                                <label class="text-sm font-semibold" for="service_style">Service Style</label>
+                                <select class="mt-1 w-full rounded-2xl border border-babaBrick/30 px-4 py-3" id="service_style" name="service_style" data-required>
+                                    <option value="">[Select]</option>
+                                    <option value="dropoff">Drop-off</option>
+                                    <option value="full-service">Full Service</option>
+                                </select>
+                            </div>
+                            <div class="sm:col-span-2">
+                                <label class="text-sm font-semibold" for="catering_message">Notes</label>
+                                <textarea class="mt-1 w-full rounded-2xl border border-babaBrick/30 px-4 py-3" id="catering_message" name="catering_message" rows="4" placeholder="[PLACEHOLDER: Menu preferences, budget, timing, etc.]" data-required></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-section="jobs-storefront" class="space-y-4 hidden">
+                        <p class="text-sm uppercase tracking-[0.3em] text-slate-500">Job Application – Storefront</p>
+                        <div class="grid gap-4 sm:grid-cols-2">
+                            <div>
+                                <label class="text-sm font-semibold" for="availability_store">Availability</label>
+                                <input class="mt-1 w-full rounded-2xl border border-babaBrick/30 px-4 py-3" id="availability_store" name="availability_store" type="text" placeholder="[PLACEHOLDER: Days/hours available]" data-required />
+                            </div>
+                            <div>
+                                <label class="text-sm font-semibold" for="eligibility_store">Work Eligibility</label>
+                                <input class="mt-1 w-full rounded-2xl border border-babaBrick/30 px-4 py-3" id="eligibility_store" name="eligibility_store" type="text" placeholder="[PLACEHOLDER: Age/eligibility notes]" data-required />
+                            </div>
+                            <div class="sm:col-span-2">
+                                <label class="text-sm font-semibold" for="resume_store">Resume (PDF)</label>
+                                <input class="mt-1 w-full rounded-2xl border border-babaBrick/30 px-4 py-3" id="resume_store" name="resume_store" type="file" accept=".pdf,.doc,.docx" />
+                            </div>
+                            <div class="sm:col-span-2">
+                                <label class="text-sm font-semibold" for="jobs_store_message">Message</label>
+                                <textarea class="mt-1 w-full rounded-2xl border border-babaBrick/30 px-4 py-3" id="jobs_store_message" name="jobs_store_message" rows="4" placeholder="[PLACEHOLDER: Intro + experience]" data-required></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-section="jobs-vending" class="space-y-4 hidden">
+                        <p class="text-sm uppercase tracking-[0.3em] text-slate-500">Job Application – Vending</p>
+                        <div class="grid gap-4 sm:grid-cols-2">
+                            <div>
+                                <label class="text-sm font-semibold" for="availability_vend">Availability</label>
+                                <input class="mt-1 w-full rounded-2xl border border-babaBrick/30 px-4 py-3" id="availability_vend" name="availability_vend" type="text" placeholder="[PLACEHOLDER: Weekends/evenings/events]" data-required />
+                            </div>
+                            <div>
+                                <label class="text-sm font-semibold" for="license_vend">Driver’s License</label>
+                                <select class="mt-1 w-full rounded-2xl border border-babaBrick/30 px-4 py-3" id="license_vend" name="license_vend" data-required>
+                                    <option value="">[Select]</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                            <div class="sm:col-span-2">
+                                <label class="text-sm font-semibold" for="resume_vend">Resume (PDF)</label>
+                                <input class="mt-1 w-full rounded-2xl border border-babaBrick/30 px-4 py-3" id="resume_vend" name="resume_vend" type="file" accept=".pdf,.doc,.docx" />
+                            </div>
+                            <div class="sm:col-span-2">
+                                <label class="text-sm font-semibold" for="jobs_vend_message">Message</label>
+                                <textarea class="mt-1 w-full rounded-2xl border border-babaBrick/30 px-4 py-3" id="jobs_vend_message" name="jobs_vend_message" rows="4" placeholder="[PLACEHOLDER: Intro + experience]" data-required></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-section="general" class="space-y-4">
+                        <p class="text-sm uppercase tracking-[0.3em] text-slate-500">General Message</p>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="text-sm font-semibold" for="subject">Subject</label>
+                                <input class="mt-1 w-full rounded-2xl border border-babaBrick/30 px-4 py-3" id="subject" name="subject" type="text" placeholder="[PLACEHOLDER: Subject]" data-required />
+                            </div>
+                            <div>
+                                <label class="text-sm font-semibold" for="message">Message</label>
+                                <textarea class="mt-1 w-full rounded-2xl border border-babaBrick/30 px-4 py-3" id="message" name="message" rows="4" placeholder="[PLACEHOLDER: How can we help?]" data-required></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="w-full rounded-2xl bg-babaMaroon px-4 py-3 text-sm font-semibold text-white">Send Message</button>
                 </form>
             </div>
         </section>

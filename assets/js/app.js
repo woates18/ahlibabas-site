@@ -207,3 +207,43 @@ document.addEventListener("DOMContentLoaded", init);
 window.addEventListener("load", sizeOrderingIframe);
 window.addEventListener("resize", sizeOrderingIframe);
 
+
+// Contact form: show/hide sections by reason + deep link support
+const initContactForm = () => {
+  if (document.body?.dataset?.page !== "contact") return;
+  const form = document.getElementById("contact-form");
+  if (!form) return;
+  const reason = form.querySelector("#reason");
+  const sections = {
+    booking: form.querySelector('[data-section="booking"]'),
+    catering: form.querySelector('[data-section="catering"]'),
+    "jobs-storefront": form.querySelector('[data-section="jobs-storefront"]'),
+    "jobs-vending": form.querySelector('[data-section="jobs-vending"]'),
+    general: form.querySelector('[data-section="general"]')
+  };
+  const allSections = Object.values(sections).filter(Boolean);
+
+  const setRequired = (container, on) => {
+    if (!container) return;
+    container.querySelectorAll("[data-required]").forEach(el => {
+      if (on) el.setAttribute("required", ""); else el.removeAttribute("required");
+    });
+  };
+
+  const show = key => {
+    allSections.forEach(s => { s.classList.add("hidden"); setRequired(s, false); });
+    const active = sections[key] || sections.general;
+    active.classList.remove("hidden");
+    setRequired(active, true);
+  };
+
+  // Deep-link: ?topic=booking|catering|jobs|jobs-storefront|jobs-vending|general
+  const params = new URLSearchParams(window.location.search);
+  let start = params.get("topic") || params.get("reason") || "general";
+  if (start === "jobs") start = "jobs-storefront";
+  if (!sections[start]) start = "general";
+  reason.value = start;
+
+  show(start);
+  reason.addEventListener("change", e => show(e.target.value));
+};
